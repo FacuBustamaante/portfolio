@@ -15,6 +15,10 @@
         <a><img src="images/portfolio.png" alt="Logo" class="logo"></a>
     </div>
         <ul>
+            <div class="container">
+            <input class="container_toggle" type="checkbox" id="switch" name="mode">
+            <label for="switch">Toggle</label>
+            </div>
             <li><a href=""><img src="/images/logos/dark.mode" alt=""></a></li>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#Sobre-mi">Sobre mi</a></li>
@@ -130,6 +134,25 @@
         </svg>
     </div>
 </section>
+<script>
+    var checkbox = document.querySelector('input[name=mode]');
 
+        checkbox.addEventListener('change', function() {
+            if(this.checked) {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        })
+
+        let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+                document.documentElement.classList.remove('transition');
+            }, 1000)
+        }
+</script>
 </body>
 </html>
