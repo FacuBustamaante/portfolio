@@ -7,6 +7,10 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <title>Portfolio | Facundo Bustamante</title>
 </head>
 <body>
@@ -15,10 +19,6 @@
         <a><img src="images/portfolio.png" alt="Logo" class="logo"></a>
     </div>
         <ul>
-            <div class="container">
-            <input class="container_toggle" type="checkbox" id="switch" name="mode">
-            <label for="switch">Toggle</label>
-            </div>
             <li><a href=""><img src="/images/logos/dark.mode" alt=""></a></li>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#Sobre-mi">Sobre mi</a></li>
@@ -37,7 +37,7 @@
         <h1 class="margin-0 name">Facundo Bustamante.</h1>
         <p class="profession">Full-Stack Developer</p>
         <div class="buttons-container">
-            <button class="first-section-buttons hvr-underline-reveal"><a target="_blank" href="https://www.github.com/FacuBustamaante">GitHub</a></button>
+            <button class="first-section-buttons hvr-underline-reveal"><a target="_blank" href="https://www.github.com/FacuBustamaante">Github</a></button>
             <button class="first-section-buttons hvr-underline-reveal"><a target="_blank" href="https://drive.google.com/file/d/1E5FX3228N2ivVPBtQYGIKrNum6QOoZEd/view?usp=drive_link">Descargar CV</a></button>
         </div>
     </div>
@@ -57,7 +57,7 @@
     </section>
 
 <section id="tecnologias" class="full-screen-section noise-left">
-  <div class="width">
+  <div class="width scroll1">
     <h2>Tecnologías Backend</h2>
     <p>JAVA</p>
     <p>SPRING</p>
@@ -65,7 +65,7 @@
     <p>POSTGRESQL</p>
     <p>MYSQL</p>
   </div>
-<div class="width">
+<div class="width scroll2">
     <h2>Otras Tecnologías</h2>
     <p>GIT</p>
     <p>GITHUB</p>
@@ -73,7 +73,7 @@
     <p>LINUX</p>
     <p>PHOTOSHOP</p>
 </div>
-<div class="width">
+<div class="width scroll3">
     <h2>Tecnologías Frontend</h2>
     <p>HTML</p>
     <p>CSS</p>
@@ -84,8 +84,10 @@
   </div>
 </section>
 
-<section id="proyectos" class="full-screen-section noise-right fifth-section">
-    <div class="card noise-right" style="background-color: #c96565;">
+<section style="height: 120vh;" id="proyectos" class="full-screen-section noise-right ">
+    <h2 class="margin-0 tittle-1">Proyectos</h2>
+    <div class="full-screen-section fifth-section">
+        <div class="card scroll1 noise-right" style="background-color: #c96565;">
         <h3>Crypto Compare</h3>
         <div >
              <p class="desc-card">Web para conocer el valor de las principales criptomonedas comparandolas
@@ -97,7 +99,7 @@
              </div>
         </div>
     </div>
-    <div class="card noise-top" style="background-color: #c96565;">
+    <div class="card scroll2 noise-top" style="background-color: #c96565;">
         <h3>Cites React</h3>
        <div >
              <p class="desc-card">Organiza y gestiona turnos veterinarios de forma fácil y rápida.
@@ -111,7 +113,7 @@
              </div>
        </div>
     </div>    
-    <div class="card noise-left" style="background-color: #c96565;">
+    <div class="card scroll3 noise-left" style="background-color: #c96565;">
         <h3>Personal Budget</h3>
        <div>
              <p class="desc-card">Aplicación de presupuesto personal desarrollada con React, JavaScript, Tailwind CSS y Vite.
@@ -123,36 +125,90 @@
              </div>
        </div>
     </div>     
+    </div>
 </section>
 
-<section id="contacto" class="mid-screen-section fifth-section noise-left">
-    <div>
-        <h2>Contacto</h2>
-        <svg width="24" height="24" viewBox=" 0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 17L17 7" stroke="#0057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M17 17L7 7" stroke="#0057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
+<section id="contacto" class="mid-screen-section noise-left">
+    <div class="contact-container scroll1a">
+        <h3>Contacto</h3>
+        <p>Hecho con ❤️ por Facundo</p>
+        <button><a target="_blank" href="https://www.instagram.com/facubustamant.e/#"><img class="img-contact" src="images/logos/instagram.png" alt="" srcset=""></a></button>
+        <button><a target="_blank" href="https://www.x.com/facubustamantex"><img class="img-contact" src="images/logos/twitter.png" alt="" srcset=""></a></button>
+        <button><a target="_blank" href="mailto:facundombustamante@gmail.com"><img class="img-contact" src="images/logos/email.png" alt="" srcset=""></a></button>
+        <p>2025 © Todos los derechos reservados.</p>
+    </div>
+    <div class="boxes-container">
+        <div class="box scroll2a noise-top"><p>"Be yourself and don't go with the flow."</p></div>
+        <div class="box scroll3a noise-top"><p>"The future belongs to those who believe in the beauty of their dreams."</p></div>
     </div>
 </section>
 <script>
-    var checkbox = document.querySelector('input[name=mode]');
-
-        checkbox.addEventListener('change', function() {
-            if(this.checked) {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'dark')
-            } else {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'light')
-            }
-        })
-
-        let trans = () => {
-            document.documentElement.classList.add('transition');
-            window.setTimeout(() => {
-                document.documentElement.classList.remove('transition');
-            }, 1000)
-        }
+    ScrollReveal().reveal('.presentacion-text', {
+        duration: 2000,
+        origin: 'left',
+        distance: '150px',
+        reset: true
+    });
+    ScrollReveal().reveal('.image-container', {
+        duration: 2000,
+        origin: 'bottom',
+        distance: '50px',
+        reset: true
+    });
+    ScrollReveal().reveal('.buttons-container', {
+        duration: 3000,
+        origin: 'bottom',
+        distance: '50px',
+        reset: true
+    });
+    ScrollReveal().reveal('.text-container', {
+        duration: 2500,
+        origin: 'bottom',
+        distance: '150px',
+        reset: true
+    });
+    ScrollReveal().reveal('.margin-0', {
+        duration: 3000,
+        origin: 'bottom',
+        distance: '150px',
+        reset: true
+    });
+        ScrollReveal().reveal('.scroll1', {
+        duration: 2000,
+        origin: 'bottom',
+        distance: '150px',
+        reset: true
+    });
+        ScrollReveal().reveal('.scroll2', {
+        duration: 3000,
+        origin: 'bottom',
+        distance: '150px',
+        reset: true
+    });
+        ScrollReveal().reveal('.scroll3', {
+        duration: 4000,
+        origin: 'bottom',
+        distance: '150px',
+        reset: true
+    });
+            ScrollReveal().reveal('.scroll1a', {
+        duration: 2000,
+        origin: 'top',
+        distance: '150px',
+        reset: true
+    });
+        ScrollReveal().reveal('.scroll2a', {
+        duration: 3000,
+        origin: 'top',
+        distance: '150px',
+        reset: true
+    });
+        ScrollReveal().reveal('.scroll3a', {
+        duration: 4000,
+        origin: 'top',
+        distance: '150px',
+        reset: true
+    });
 </script>
 </body>
 </html>
