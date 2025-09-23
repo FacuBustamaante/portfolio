@@ -86,12 +86,17 @@ h1 {
     background-color: #1c1c1c;
     color: white;
     gap: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn a{
     color: white;
     font-size: 1rem;
     text-decoration: none;
+}
+
+.btn:hover{
+    transform: scale(1.05)
 }
 
 .btn-container{
@@ -152,7 +157,6 @@ h1 {
     justify-content: space-evenly;
     scroll-snap-align: start;
     width: 100%;
-
 }
 
 .presentacion-text a {
@@ -311,10 +315,12 @@ h1 {
     padding-left: 4%;
     margin: 0;
     background-color: #c8d4f8;
+     transition: all 0.3s ease-in-out;
 }
 
 #tecnologias p:hover{
-         color: white;
+         transform: scale(1.05);
+         font-weight: bold;
 }
 #tecnologias h2{
     border-top-left-radius: 15px;
