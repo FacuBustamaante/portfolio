@@ -4,7 +4,7 @@
 
 ---
 
-### 🌟 Visita mi Portafolio
+### 🌟 Visit my Portfolio
 
 You can go to visit the latest version running here: **https://www.facubustamante.dev**
 
