@@ -20,9 +20,9 @@ You can go to visit the latest version running here: **https://www.facubustamant
 
 ---
 
-### 💬 Contacto
+### 💬 Contact
 
 I'd love to hear from you! You can contact me through:
 
 -   **LinkedIn:** https://www.linkedin.com/in/fambustamante
--   **Correo Electrónico:** facundombustamante@gmail.com
+-   **Email:** facundombustamante@gmail.com
