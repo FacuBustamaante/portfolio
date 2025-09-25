@@ -554,7 +554,9 @@ h1 {
     display: none;
   }
 
-  /* Removed duplicate #tecnologias selector. Consolidated below. */
+  .card:hover {
+    width: 90%;
+  }
 
   .text-container {
     width: 100%;
