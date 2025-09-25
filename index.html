@@ -44,9 +44,9 @@
 
     <section id="inicio" class="full-screen-section first-section">
         <div class="presentacion-text">
-            <h1 id="t1" class="margin-0 name scroll1" style="opacity: 5%;">facundo</h1>
-            <h1 id="t2" class="margin-0 name scroll2">Facundo</h1>
-            <h1 id="t3" class="margin-0 name scroll3" style="color: #00684a;">Bustamante</h1>
+            <h1 id="t1" class="margin-0 name" style="opacity: 0%;">facundo</h1>
+            <h1 id="t2" class="margin-0 name">Facundo</h1>
+            <h1 id="t3" class="margin-0 name" style="color: #00684a;">Bustamante</h1>
             <p class="profession">Full-Stack Developer</p>
             <div class="btn-container">
                 <button class="btn">
@@ -85,14 +85,15 @@
             </button>
         </div>
     </section>
-    <section id="developer-designer" class="full-screen-section second-section" style="background-color: #00684a;">
+    <section id="developer-designer" class="full-screen-section second-section radius-bottom"
+        style="background-color: #00684a;">
         <div>
             <h2 class="phrase">DEVELOPER </h2>
-            <h2 class="phrase" style="opacity: 50%;">DESIGNER</h2>
+            <h2 class="phrase" style="opacity: 50%; font-family: 'Beezle', serif;">DESIGNER</h2>
             <h2 class="phrase" style="opacity: 20%;">CREATOR /</h2>
         </div>
     </section>
-    <section id="tecnologias" class="full-screen-section" style="background-color: #ebebeb;">
+    <section id="tecnologias" class="full-screen-section" style="background-color: #ffffff;">
         <div class="width scroll1">
             <h2>Languages & Tools</h2>
             <p>JAVA</p>
@@ -118,47 +119,47 @@
         </div>
         </div>
     </section>
-    <section style="height: 140vh;    background-color: #00684a;" id="proyectos" class="full-screen-section">
+    <section style="height: 140vh; background-color: #00684a;" id="proyectos" class="full-screen-section radius-bottom">
         <h2 class="margin-0 title-1">Projects</h2>
         <div class="full-screen-section fifth-section">
             <div class="card scroll1">
                 <h3>Crypto Compare</h3>
-                <div>
-                    <p class="desc-card">Web para conocer el valor de las principales criptomonedas comparandolas
+                <img class="project-img" src="/images/undraw_mobile-development_tjxm.svg" alt="" srcset="">
+                <div class="text-card">
+                    <p>Web para conocer el valor de las principales criptomonedas comparandolas
                         con el dolar y el euro. Utiliza la API de CoinGecko para obtener datos en tiempo real.
                         Desarrollada con React, Tailwind CSS y Vite.</p>
-                    <div class="card-links">
-                        <a href="https://cryptocomparex.netlify.app/" target="_blank"
-                            rel="noopener noreferrer">VISIT</a>
-                        <a href="https://github.com/FacuBustamaante/crypto-compare-react" target="_blank"
-                            rel="noopener noreferrer">REPOSITORY</a>
-                    </div>
+
+                    <a href="https://cryptocomparex.netlify.app/" target="_blank" rel="noopener noreferrer">VISIT</a>
+                    <a href="https://github.com/FacuBustamaante/crypto-compare-react" target="_blank"
+                        rel="noopener noreferrer">REPOSITORY</a>
+
                 </div>
             </div>
             <div class="card scroll2">
                 <h3>Real-Time Chat App</h3>
-                <div>
-                    <p class="desc-card">Aplicación de mensajería en tiempo real que permite la comunicación instantánea
+                <img class="project-img" src="/images/undraw_maintenance_4unj.svg" alt="" srcset="">
+                <div class="text-card">
+                    <p>Aplicación de mensajería en tiempo real que permite la comunicación instantánea
                         entre usuarios.
                         Desarrollada con Java, Spring Boot, WebSocket y SockJS.
                     </p>
-                    <div class="card-links">
-                        <a href="https://github.com/FacuBustamaante/chat-app" target="_blank"
-                            rel="noopener noreferrer">REPOSITORY</a>
-                    </div>
+
+                    <a href="https://github.com/FacuBustamaante/chat-app" target="_blank"
+                        rel="noopener noreferrer">REPOSITORY</a>
+
                 </div>
             </div>
             <div class="card scroll3">
                 <h3>To-do App</h3>
-                <div>
-                    <p class="desc-card">Simple e intuitiva To-Do App que ayuda a los usuarios a organizar tareas y
+                <img class="project-img" src="/images/undraw_enter-password_1kl4.svg" alt="" srcset="">
+                <div class="text-card">
+                    <p>Simple e intuitiva To-Do App que ayuda a los usuarios a organizar tareas y
                         seguir el progreso.
                         Desarrollada con Java, Spring Boot, JPA y Thymeleaf.
                     </p>
-                    <div class="card-links">
-                        <a href="https://github.com/FacuBustamaante/todo-app" target="_blank"
-                            rel="noopener noreferrer">REPOSITORY</a>
-                    </div>
+                    <a href="https://github.com/FacuBustamaante/todo-app" target="_blank"
+                        rel="noopener noreferrer">REPOSITORY</a>
                 </div>
             </div>
             <a href="/projects.html" class="ver-todos">See All</a>
@@ -178,21 +179,15 @@
             <p>2025 © All Rights Reserved.</p>
         </div>
         <div class="boxes-container">
-            <div class="box scroll2a noise-top">
+            <div class="box scroll2a">
                 <p>"Be yourself and don't go with the flow."</p>
             </div>
-            <div class="box scroll3a noise-top">
+            <div class="box scroll3a">
                 <p>"The future belongs to those who believe in the beauty of their dreams."</p>
             </div>
         </div>
     </section>
     <script>
-        ScrollReveal().reveal('.presencion-text', {
-            duration: 6000,
-            origin: 'bottom',
-            distance: '50px',
-            reset: true
-        });
         ScrollReveal().reveal('.image-container', {
             duration: 2000,
             origin: 'bottom',
