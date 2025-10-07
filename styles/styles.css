@@ -110,6 +110,7 @@ h1 {
     gap: 5px;
     transition: all 0.3s ease-in-out;
     border: 2px solid #002e21;
+    cursor: pointer;
 }
 
 .btn a {
@@ -177,7 +178,8 @@ h1 {
 .presentacion-text {
     width: 90%;
     height: 80%;
-    background-image: url(/images/magicpattern-mesh-gradient-1758828239372.png);
+    /*background-image: url(/images/magicpattern-mesh-gradient-1758828239372.png);*/
+    background-color: var(--primary-color);
     background-size: cover;
     padding: 100px;
     border-radius: 30px;
@@ -313,7 +315,7 @@ h1 {
 
 #tecnologias p {
     font-size: 1.5rem;
-    padding-left: 4%;
+    padding: .5rem;
     margin: 0;
     background-color: var(--primary-color);
     transition: all 0.3s ease-in-out;
