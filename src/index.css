@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------
+   Design tokens (Tailwind v4 @theme -> auto utilities)
+----------------------------------------------------------------- */
+@theme {
+  --color-primary: #00684a; /* MongoDB deep green */
+  --color-secondary: #00ed64; /* neon green accent */
+  --color-deep: #002e21;
+  --color-ink: #0a0a0a;
+
+  /* Fraunces — modern, elegant variable serif */
+  --font-display: "Fraunces", "Playfair Display", Georgia, serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --shadow-glow: 0 0 40px -10px rgba(0, 237, 100, 0.45);
+}
+
+/* Fraunces optical/soft tuning for display headings */
+.font-display {
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  letter-spacing: -0.02em;
+}
+
+/* dark mode bound to the .dark class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ----------------------------------------------------------------
+   Theme-aware semantic variables
+----------------------------------------------------------------- */
+@layer base {
+  :root {
+    --bg: #f4f5f4;
+    --bg-elevated: #ffffff;
+    --surface: #ffffff;
+    --border: #e4e6e4;
+    --text: #14171a;
+    --text-muted: #5b6770;
+    --grid: rgba(0, 0, 0, 0.04);
+  }
+
+  :root.dark {
+    --bg: #070808;
+    --bg-elevated: #0e1110;
+    --surface: #111413;
+    --border: #1e2422;
+    --text: #f1f5f3;
+    --text-muted: #8a948f;
+    --grid: rgba(255, 255, 255, 0.035);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-secondary);
+    color: #00210f;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+}
+
+/* ----------------------------------------------------------------
+   Utilities & helpers
+----------------------------------------------------------------- */
+@layer utilities {
+  .bg-surface {
+    background-color: var(--surface);
+  }
+  .bg-base {
+    background-color: var(--bg);
+  }
+  .bg-elevated {
+    background-color: var(--bg-elevated);
+  }
+  .text-body {
+    color: var(--text);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .border-app {
+    border-color: var(--border);
+  }
+
+  .text-gradient {
+    background: linear-gradient(120deg, var(--color-secondary), #6fffb0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* subtle grid background */
+  .grid-bg {
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .glass {
+    background-color: color-mix(in srgb, var(--bg-elevated) 70%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+  }
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
