@@ -3,7 +3,7 @@ import { FiGithub, FiArrowDown } from "react-icons/fi";
 import { HiOutlineDocumentText } from "react-icons/hi";
 
 const CV_URL =
-  "https://drive.google.com/file/d/16M79YxxmFvsg0A7qtQZlH9stzdGDh7gf/view?usp=drive_link";
+  "https://docs.google.com/document/d/1O9q2C8tTmWvvOLyUkhCVZyKsumkENAwJ/edit?usp=sharing&ouid=115366305069650663260&rtpof=true&sd=true";
 
 const container = {
   hidden: {},
